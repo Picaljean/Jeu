@@ -118,7 +118,7 @@ void Jeu::valid_swaps(){
       }
       swap(i-1,i);
     }
-    if(i%taille<=taille-1){//check for a right swap
+    if(i%taille==taille-1){//check for a right swap
       swap(i,i+1);
       if(is_chain(i+1)){
 	swaps.push_back(make_pair(i,i+1));
@@ -132,7 +132,7 @@ void Jeu::valid_swaps(){
       }
       swap(i-taille,i);
     }
-    if(i/taille<=taille-1){//check for a down swap
+    if(i/taille==taille-1){//check for a down swap
       swap(i,i+taille);
       if(is_chain(i+taille)){
 	swaps.push_back(make_pair(i,i+taille));
